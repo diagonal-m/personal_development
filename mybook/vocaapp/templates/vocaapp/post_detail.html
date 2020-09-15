@@ -1,0 +1,13 @@
+{% extends 'vocaapp/base.html' %}
+
+{% block content %}
+<div class="card mb-3 mt-4">
+  <h4 class="card-header bg-dark text-white">{{ post.question }}</h4>
+  <div class="card-body">
+      <h3>{{ post.answer | linebreaksbr | urlize}}</h3>
+      <br /><br />
+      <a href="{{request.META.HTTP_REFERER}}" class="btn btn-dark">問題に戻る</a>
+  </div>
+</div>
+
+{% endblock %}

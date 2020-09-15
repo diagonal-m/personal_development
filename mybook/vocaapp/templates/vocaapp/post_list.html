@@ -1,0 +1,17 @@
+{% extends 'vocaapp/base.html' %}
+
+{% block content %}
+{% for post in post_list %}
+<div class="card mb-4 mt-4">
+  <h4 class="card-header bg-dark text-white">問題</h4>
+  <div class="card-body">
+      <h3>{{post.question}}</h3>
+   <br /><br />
+    <a href="{% url 'vocaapp:detail' post.pk %}" class="btn btn-dark">答えを見る</a>
+  </div>
+</div>
+{% endfor %}
+
+{% include 'vocaapp/page.html' %}
+
+{% endblock %}
